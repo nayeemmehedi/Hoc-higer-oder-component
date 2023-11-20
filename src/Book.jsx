@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import withHoc from './withHoc'
 
-function Book(value) {
-    console.log("v",value)
+function Book({book,setBook}) {
+   
+
+    
   return (
-    <div>Book ... {value.value}</div>
+    <div>
+        value = {book}
+        <br /><hr />
+        <input type="text" onChange={(e)=> setBook(e.target.value)} />
+       
+    </div>
   )
 }
 

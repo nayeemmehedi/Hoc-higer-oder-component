@@ -2,18 +2,15 @@ import { useState } from "react";
 
 function withHoc(WithComponent) {
   return (props) => {
-    const [name, setname] = useState(false);
+    const [book, setBook] = useState(0);
 
     setTimeout(() => {
       setname(true);
     }, 3000);
 
-    return !name ? (
-      "Loading........."
-    ) : (
-      <WithComponent  {...props}> </WithComponent>
-    )
-
+    return <WithComponent {...props} book={book} setBook={setBook}>
+      {" "}
+    </WithComponent>;
   };
 }
 

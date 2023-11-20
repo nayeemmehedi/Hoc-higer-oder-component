@@ -4,7 +4,7 @@ import Book from "./Book";
 export default function App() {
   return (
     <div>
-      <Book value="MACKBOOK PRO"></Book>
+      <Book></Book>
     </div>
   );
 }
